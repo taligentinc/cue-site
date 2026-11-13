@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cue Central - The SaaS Church Music & Worship Orchestration Platform</title>
+    <meta name="description" content="Cue Central synchronizes your church choir, accompanists, music director, and tech booth in real time. Plan services, distribute sheet music, and cue every moment perfectly.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://cuecentral.org/">
+
+    <!-- Open Graph & Social Cards -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cuecentral.org/">
+    <meta property="og:title" content="Cue Central - Church Music & Worship Orchestration Platform">
+    <meta property="og:description" content="Plan services, manage your hymn library, distribute sheet music to tablets, and run high-contrast stage cue cards in real time.">
+    <meta property="og:image" content="https://cuecentral.org/images/logos/icon.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cue Central - Worship Service & Church Music Operating System">
+    <meta name="twitter:description" content="The all-in-one church music platform for directors, choirs, accompanists, and tech teams.">
+
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Master Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Ambient Ambient Glows -->
+    <div class="ambient-glow glow-top-left"></div>
+    <div class="ambient-glow glow-bottom-right"></div>
+    <div class="ambient-glow glow-center"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="/" class="brand-logo" aria-label="Cue Central Home">
+                <img src="images/logos/logo-horizontal-white.svg" alt="Cue Central Logo" height="38">
+            </a>
+
+            <nav class="nav-links">
+                <a href="/" class="active">Home</a>
+                <a href="features/">Features</a>
+                <a href="pricing/">Pricing</a>
+                <a href="contact/">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://app.cuecentral.org/login" class="btn btn-ghost btn-sm">Sign In</a>
+                <a href="https://app.cuecentral.org/register" class="btn btn-primary btn-sm">
+                    Get Started Free
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+
+            <button class="mobile-toggle" aria-label="Toggle navigation menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer">
+        <nav class="nav-links">
+            <a href="/" class="active">Home</a>
+            <a href="features/">Features</a>
+            <a href="pricing/">Pricing</a>
+            <a href="contact/">Contact</a>
+            <a href="https://app.cuecentral.org/login">Sign In</a>
+        </nav>
+        <a href="https://app.cuecentral.org/register" class="btn btn-primary" style="width: 100%;">Get Started Free</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="badge-pill">
+                <span class="badge-dot"></span>
+                Cue Central 2.0 • The Worship & Music Ministry Platform
+            </div>
+
+            <h1 class="hero-title">
+                Every Hymn, Choir Anthem, &amp; Stage Cue. <br>
+                <span class="gradient-text">Synchronized in Real Time.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                Cue Central brings your music director, vocalists, accompanists, and tech booth into one effortless platform. 
+                Say goodbye to three-ring binders, misplaced sheet music, and chaotic Sunday mornings.
+            </p>
+
+            <div class="hero-actions">
+                <a href="https://app.cuecentral.org/register" class="btn btn-primary btn-lg">
+                    Start Your 30-Day Free Trial
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#cockpit-demo" class="btn btn-secondary btn-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                    Explore Live Cockpit
+                </a>
+            </div>
+
+            <div class="trust-strip">
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>No Credit Card Required</span>
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Instant Cloud Sync Across Tablets &amp; Stage</span>
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Dedicated Subdomain for Your Church</span>
+                </div>
+            </div>
+
+            <!-- Interactive Cockpit Preview Card -->
+            <div class="cockpit-wrapper" id="cockpit-demo">
+                <!-- Floating Badges -->
+                <div class="hero-float-badge badge-float-left">
+                    <div class="float-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                    </div>
+                    <div class="float-text">
+                        <h6>Hymn #242 Queued</h6>
+                        <p>Key of D • Organ &amp; Brass Intro</p>
+                    </div>
+                </div>
+
+                <div class="hero-float-badge badge-float-right">
+                    <div class="float-icon" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <div class="float-text">
+                        <h6>Stage Stage In Sync</h6>
+                        <p>18 Choir Members Connected</p>
+                    </div>
+                </div>
+
+                <div class="cockpit-frame">
+                    <div class="cockpit-header">
+                        <div class="cockpit-dots">
+                            <span class="cockpit-dot dot-red"></span>
+                            <span class="cockpit-dot dot-yellow"></span>
+                            <span class="cockpit-dot dot-green"></span>
+                        </div>
+                        <div class="cockpit-title-bar">
+                            <span class="cockpit-badge-live">LIVE SERVICE CONSOLE</span>
+                            <span>Sunday Morning Worship • 10:30 AM</span>
+                        </div>
+                        <div style="font-size: 0.78rem; color: #94a3b8; font-family: var(--font-mono);">
+                            CUE ID: #9042
+                        </div>
+                    </div>
+
+                    <div class="cockpit-body">
+                        <!-- Left: Interactive Timeline -->
+                        <div class="cockpit-timeline">
+                            <div class="timeline-header">
+                                <span>Service Order (Click Item)</span>
+                                <span>Est. 68m</span>
+                            </div>
+
+                            <div class="timeline-item" data-song-id="prelude">
+                                <span class="timeline-time">10:25</span>
+                                <div class="timeline-info">
+                                    <h5>Organ &amp; Piano Prelude</h5>
+                                    <p>And Can It Be • Key of G</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item active" data-song-id="hymn1">
+                                <span class="timeline-time">10:32</span>
+                                <div class="timeline-info">
+                                    <h5>Hymn #242 (Crown Him)</h5>
+                                    <p>Congregation • Key of D</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item" data-song-id="choir">
+                                <span class="timeline-time">10:44</span>
+                                <div class="timeline-info">
+                                    <h5>Choir Anthem: Worthy Is The Lamb</h5>
+                                    <p>Chancel Choir • Box #412</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item" data-song-id="special">
+                                <span class="timeline-time">10:55</span>
+                                <div class="timeline-info">
+                                    <h5>Special: Vocal Trio</h5>
+                                    <p>It Is Well • Spillman / Vance</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item" data-song-id="closing">
+                                <span class="timeline-time">11:32</span>
+                                <div class="timeline-info">
+                                    <h5>Closing Hymn #318</h5>
+                                    <p>Blessed Assurance • Verse 1, 3</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Center: Stage Prompter & Cue Card View -->
+                        <div class="cockpit-stage">
+                            <div class="stage-top-meta">
+                                <div>
+                                    <div class="stage-song-title">Hymn #242: Crown Him with Many Crowns</div>
+                                    <div class="stage-song-details">
+                                        <span>Congregational</span> • <span>Key of D</span> • <span>Hymnal p. 242</span>
+                                    </div>
+                                </div>
+                                <span style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc; padding: 4px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 700;">STANZA 1 OF 4</span>
+                            </div>
+
+                            <div class="stage-prompter-display">
+                                <div class="prompter-stanza">
+                                    Crown Him with many crowns,<br>
+                                    The Lamb upon His throne;<br>
+                                    Hark! How the heav'nly anthem drowns<br>
+                                    All music but its own!
+                                </div>
+                                <div class="prompter-cue-line">
+                                    Brass Interlude after Verse 2 • Organ Forte
+                                </div>
+                            </div>
+
+                            <div class="stage-bottom-controls">
+                                <div class="stage-timer">00:03:42</div>
+                                <div style="display: flex; gap: 8px;">
+                                    <span style="font-size: 0.78rem; background: rgba(255,255,255,0.06); padding: 4px 10px; border-radius: 4px; color: #cbd5e1;">Next: Pastoral Prayer (Bro. Dave)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Telemetry & Stage Sync -->
+                        <div class="cockpit-telemetry">
+                            <div class="telemetry-card">
+                                <div class="telemetry-label">Active Hymnal</div>
+                                <div class="telemetry-value">Majesty Hymns</div>
+                                <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">Last Sung: 14 weeks ago (Dust Level: Low)</div>
+                            </div>
+
+                            <div class="telemetry-card">
+                                <div class="telemetry-label">Stage Stage Sync</div>
+                                <div class="roster-pill-list">
+                                    <div class="roster-pill">
+                                        <span>Choir iPad Roster (18)</span>
+                                        <span class="roster-status"></span>
+                                    </div>
+                                    <div class="roster-pill">
+                                        <span>Organist Stand (Pedal Sync)</span>
+                                        <span class="roster-status"></span>
+                                    </div>
+                                    <div class="roster-pill">
+                                        <span>Pianist Score (PDF Key D)</span>
+                                        <span class="roster-status"></span>
+                                    </div>
+                                    <div class="roster-pill">
+                                        <span>Sound Booth Monitor</span>
+                                        <span class="roster-status"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="telemetry-card">
+                                <div class="telemetry-label">Rehearsal Audio</div>
+                                <div style="font-size: 0.8rem; font-weight: 600; color: #ffffff;">MP3 Part Tracks Distributed</div>
+                                <div style="font-size: 0.72rem; color: #a5b4fc; margin-top: 2px;">S • A • T • B Voicings Ready</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Banner -->
+    <section class="stats-banner">
+        <div class="container">
+            <div class="stats-grid">
+                <div>
+                    <div class="stat-num">40,000+</div>
+                    <div class="stat-label">Services Beautifully Orchestrated</div>
+                </div>
+                <div>
+                    <div class="stat-num">100%</div>
+                    <div class="stat-label">Real-Time Music Stand Sync</div>
+                </div>
+                <div>
+                    <div class="stat-num">0</div>
+                    <div class="stat-label">Sunday Morning Binder Surprises</div>
+                </div>
+                <div>
+                    <div class="stat-num">4.5 hrs</div>
+                    <div class="stat-label">Saved Every Week by Music Directors</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features Grid -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge-pill">Purpose-Built Architecture</div>
+                <h2>Everything You Need for Sunday Excellence</h2>
+                <p class="lead mx-auto">
+                    Cue Central replaces messy spreadsheets, text threads, and heavy choir folders with a purpose-built system designed for the liturgical rhythms of church life.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+                <!-- Feature 1 -->
+                <div class="card">
+                    <div class="card-icon-box icon-indigo">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+                    </div>
+                    <h3>Drag &amp; Drop Service Builder</h3>
+                    <p>
+                        Assemble Sunday morning, Sunday evening, and Wednesday prayer service orders in minutes. Reorder songs, add color tags, and automatically recalculate service running times.
+                    </p>
+                    <a href="features/#builder" class="card-link">
+                        Explore Service Builder
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="card">
+                    <div class="card-icon-box icon-purple">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <h3>Live Stage Teleprompter Cue Cards</h3>
+                    <p>
+                        High-contrast, large-format stage prompter output for stage confidence monitors and tablet stands. Singers and sound engineers see lyrics, keys, and upcoming pastoral shifts live.
+                    </p>
+                    <a href="features/#cuecards" class="card-link">
+                        See Stage Prompter
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="card">
+                    <div class="card-icon-box icon-cyan">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                    </div>
+                    <h3>Hymnody Intelligence &amp; Metrics</h3>
+                    <p>
+                        Track song frequency, date of last use, and key pairings. Identify "dusty hymns" your congregation hasn't sung in months, and protect your flock from song exhaustion.
+                    </p>
+                    <a href="features/#hymnody" class="card-link">
+                        Learn About Hymn Metrics
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="card">
+                    <div class="card-icon-box icon-emerald">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    </div>
+                    <h3>Cloud Digital Sheet Music Vault</h3>
+                    <p>
+                        Store your full PDF sheet music library securely in the cloud. Instant distribution to choir members' iPads, complete with Bluetooth page-turner pedal support.
+                    </p>
+                    <a href="features/#sheetmusic" class="card-link">
+                        Explore Sheet Music Library
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="card">
+                    <div class="card-icon-box icon-amber">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                    </div>
+                    <h3>Musician Stage Portal (Zero-Install PWA)</h3>
+                    <p>
+                        Volunteers and choir members access schedules, practice MP3 rehearsal tracks, and sheet music right on their smartphones without needing an app store download.
+                    </p>
+                    <a href="features/#stage-portal" class="card-link">
+                        Tour Volunteer Portal
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="card">
+                    <div class="card-icon-box icon-rose">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3>Prelude, Offertory &amp; Specials Hub</h3>
+                    <p>
+                        Coordinate instrumental preludes, timed offertories, vocal trios, and soloist rotations. Never double-book an accompanist or leave an instrumentalist guessing.
+                    </p>
+                    <a href="features/#specials" class="card-link">
+                        Explore Specials Scheduler
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Role Switcher -->
+    <section class="section section-tight" style="background: rgba(14, 21, 38, 0.4); border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge-pill">Unified Workflow</div>
+                <h2>Built for Every Member of the Music Team</h2>
+                <p class="lead mx-auto">
+                    From the pulpit to the orchestra pit to the sound booth, Cue Central gives everyone the exact view they need.
+                </p>
+            </div>
+
+            <div class="role-tabs">
+                <button class="role-tab-btn active" data-role="directors">For Music Pastors &amp; Directors</button>
+                <button class="role-tab-btn" data-role="accompanists">For Pianists &amp; Accompanists</button>
+                <button class="role-tab-btn" data-role="choirs">For Choirs &amp; Vocalists</button>
+                <button class="role-tab-btn" data-role="media">For Audio &amp; Media Techs</button>
+            </div>
+
+            <div class="role-content-box">
+                <div class="role-text">
+                    <h3 id="role-content-title">Built by Music Pastors for Effortless Sunday Execution</h3>
+                    <p id="role-content-desc">
+                        Save 4+ hours every week. Eliminate text message chains, misplaced paper binders, and chaotic pre-service rehearsals with an all-in-one worship orchestration console.
+                    </p>
+                    <ul class="role-feature-list" id="role-content-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Drag-and-drop service timeline builder with automatic timing recalculation</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Hymnody Intelligence tracks recent usage and dusty hymns to prevent song fatigue</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Instant master schedule distribution with one-click push notifications and email digests</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Choir library catalog with box &amp; folder numbers, physical shelf tracking, and choral voicings</span>
+                        </li>
+                    </ul>
+                    <a href="https://app.cuecentral.org/register" class="btn btn-primary">
+                        Set Up Your Church
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <div class="role-visual">
+                    <div style="background: rgba(8, 12, 21, 0.9); border-radius: 12px; padding: 20px; border: 1px solid var(--color-border);">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 10px;">
+                            <span style="font-weight: 800; font-size: 0.9rem; color: #ffffff;">Director Dashboard Preview</span>
+                            <span style="font-size: 0.72rem; color: #10b981; font-weight: 700;">● Online</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.82rem;">
+                            <div style="padding: 10px; background: rgba(99, 102, 241, 0.1); border-left: 3px solid #6366f1; border-radius: 4px;">
+                                <div style="font-weight: 700; color: #ffffff;">Hymnody Check: 3 Hymns Selected</div>
+                                <div style="color: #a5b4fc; font-size: 0.75rem;">Crown Him (#242), Blessed Assurance (#318), Holy, Holy, Holy (#1)</div>
+                            </div>
+                            <div style="padding: 10px; background: rgba(16, 185, 129, 0.1); border-left: 3px solid #10b981; border-radius: 4px;">
+                                <div style="font-weight: 700; color: #ffffff;">Volunteer Confirmation: 100%</div>
+                                <div style="color: #94a3b8; font-size: 0.75rem;">All 4 accompanists and 24 choir members confirmed attendance</div>
+                            </div>
+                            <div style="padding: 10px; background: rgba(245, 158, 11, 0.1); border-left: 3px solid #f59e0b; border-radius: 4px;">
+                                <div style="font-weight: 700; color: #ffffff;">Choir Music Stamped</div>
+                                <div style="color: #94a3b8; font-size: 0.75rem;">Digital score &amp; rehearsal tracks pushed to mobile devices</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge-pill">Honest &amp; Transparent</div>
+                <h2>Simple Pricing for Every Church Size</h2>
+                <p class="lead mx-auto">
+                    Choose the plan that fits your congregation. Every plan includes a 30-day money-back guarantee and unlimited services.
+                </p>
+            </div>
+
+            <!-- Frequency Toggle -->
+            <div class="billing-toggle-wrapper">
+                <span>Monthly Billing</span>
+                <div class="billing-switch" aria-label="Toggle annual discount">
+                    <span class="billing-knob"></span>
+                </div>
+                <span>Annual Billing</span>
+                <span class="discount-tag">Save 2 Months Free</span>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Free / Starter -->
+                <div class="pricing-card">
+                    <div>
+                        <div class="plan-tier">Starter</div>
+                        <h3 class="plan-name">Free</h3>
+                        <p class="plan-desc">For small churches or solo music leaders looking to organize weekly services.</p>
+                        <div class="plan-price-box">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount">0</span>
+                            <span class="price-period">/forever</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Full Order of Service Builder</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Master Service Schedule</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Stage Teleprompter / Cue Cards</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Up to 15 Volunteers &amp; Musicians</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Single Church Hymnal Index</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://app.cuecentral.org/register?plan=free" class="btn btn-secondary" style="width: 100%;">
+                        Start Free Forever
+                    </a>
+                </div>
+
+                <!-- Pro (Featured) -->
+                <div class="pricing-card featured">
+                    <span class="popular-ribbon">Most Popular</span>
+                    <div>
+                        <div class="plan-tier">Church Pro</div>
+                        <h3 class="plan-name">Full Suite</h3>
+                        <p class="plan-desc">The complete operating system for active church choirs, bands, and multi-service ministries.</p>
+                        <div class="plan-price-box">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount" id="price-pro">29</span>
+                            <span class="price-period" id="period-pro">/mo</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span><strong>Unlimited</strong> Volunteers &amp; Choir Members</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Cloud Sheet Music Vault (PDF Distribution)</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Rehearsal MP3 Audio Part Tracks (SATB)</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Hymnody Intelligence &amp; Dust Metrics</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Custom Church Subdomain</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Priority Director Support</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://app.cuecentral.org/register?plan=pro" class="btn btn-primary" style="width: 100%;">
+                        Start 30-Day Free Trial
+                    </a>
+                </div>
+
+                <!-- Unlimited / Campus -->
+                <div class="pricing-card">
+                    <div>
+                        <div class="plan-tier">Campus Unlimited</div>
+                        <h3 class="plan-name">Multi-Campus</h3>
+                        <p class="plan-desc">Designed for large churches, regional ministries, and multi-venue organizations.</p>
+                        <div class="plan-price-box">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount" id="price-unlimited">59</span>
+                            <span class="price-period" id="period-unlimited">/mo</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Everything in Church Pro</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Multi-Campus &amp; Multi-Venue Management</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Enterprise Single Sign-On (OIDC SSO)</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Unlimited Cloud Storage for Scores &amp; Audio</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Dedicated Concierge Onboarding</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://app.cuecentral.org/register?plan=unlimited" class="btn btn-secondary" style="width: 100%;">
+                        Get Started with Unlimited
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section section-tight" style="background: rgba(14, 21, 38, 0.4); border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge-pill">Director Approved</div>
+                <h2>Loved by Pastors, Directors &amp; Volunteers</h2>
+                <p class="lead mx-auto">
+                    See why music ministries across the country trust Cue Central to bring order, beauty, and peace to their worship services.
+                </p>
+            </div>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        "Before Cue Central, planning Sunday music meant text chains, scattered binders, and people playing in different keys. Now, our entire choir and orchestra are on the same page before Sunday morning arrives."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DS</div>
+                        <div class="author-details">
+                            <h5>David Spillman</h5>
+                            <p>Music Director, Landmark Baptist Church</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        "The Hymnody Intelligence tool alone is worth every penny. We discovered hymns we hadn’t sung in over a year and stopped accidentally repeating the same three songs. It keeps our congregation engaged."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">RM</div>
+                        <div class="author-details">
+                            <h5>Robert Miller</h5>
+                            <p>Worship Pastor, Grace Bible Fellowship</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        "As a church pianist, reading PDF sheet music directly in the Cue Central app on my iPad with my Bluetooth page pedal has completely transformed my Sunday mornings. It's flawless."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);">SV</div>
+                        <div class="author-details">
+                            <h5>Sarah Vance</h5>
+                            <p>Head Pianist, Faith Baptist Church</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge-pill">Common Inquiries</div>
+                <h2>Frequently Asked Questions</h2>
+                <p class="lead mx-auto">
+                    Have questions about Cue Central? Here are the answers to the most common questions from directors and church administrators.
+                </p>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item active">
+                    <div class="faq-question">
+                        <span>How does Cue Central work for our church volunteers?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        Volunteers and choir members access Cue Central through our mobile-optimized Stage Portal (a Progressive Web App). They don't have to download anything from the Apple App Store or Google Play Store. When they log in with their email, they instantly see their upcoming service schedule, PDF music scores, and MP3 practice tracks.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can we use our existing church hymnal?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! Cue Central supports major published hymnals (including Majesty Hymns, Baptist Hymnal, Great Hymns of the Faith, Living Hymns, and Soul-Stirring Songs), as well as custom hymnals. You can cross-reference page numbers, track song frequencies, and store hymn metadata specifically for your church's books.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Does Cue Central support Bluetooth page-turner foot pedals?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        Yes. The Cue Central sheet music viewer supports standard Bluetooth pedal hardware (like PageFlip, AirTurn, and Donner), allowing pianists and organists to turn pages hands-free without leaving their piano bench.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What is the difference between Cue Central and Planning Center?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        While generic church management tools are built primarily for modern band setlists and generic volunteer check-in, Cue Central is specifically engineered for church music departments. It features choir library box/shelf inventory, hymnody dust tracking, prelude/offertory timing sets, and dedicated high-contrast teleprompter cue cards for choir lofts and music stands.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I cancel or change plans at any time?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely. There are no contracts or long-term commitments. You can upgrade, downgrade, or cancel your subscription at any time directly from your billing console.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Call to Action -->
+    <section class="section section-tight">
+        <div class="container">
+            <div class="cta-banner">
+                <div class="badge-pill">Ready for Seamless Sundays?</div>
+                <h2>Bring Order, Beauty, and Peace to Your Church Music</h2>
+                <p>
+                    Join music pastors, choirs, and musicians who have replaced binder chaos with Cue Central. Start your free trial today.
+                </p>
+                <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+                    <a href="https://app.cuecentral.org/register" class="btn btn-primary btn-lg">
+                        Start Your 30-Day Free Trial
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="contact/" class="btn btn-secondary btn-lg">Talk to Our Team</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="/" class="brand-logo">
+                        <img src="images/logos/logo-horizontal-white.svg" alt="Cue Central Logo" height="34">
+                    </a>
+                    <p>
+                        The SaaS church music and worship orchestration platform. Dedicated to excellence, reverence, and flawless Sunday execution.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="features/">Features &amp; Capabilities</a></li>
+                        <li><a href="pricing/">Pricing &amp; Plans</a></li>
+                        <li><a href="#cockpit-demo">Live Stage Cockpit</a></li>
+                        <li><a href="https://app.cuecentral.org/login">Sign In to Workspace</a></li>
+                        <li><a href="https://app.cuecentral.org/register">Create Church Account</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Taligent Ecosystem</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://routeapp.org" target="_blank" rel="noopener">ROUTE (Bus &amp; Fleet)</a></li>
+                        <li><a href="https://prokeeper.org" target="_blank" rel="noopener">ProKeeper (Tournaments)</a></li>
+                        <li><a href="https://taligent.dev" target="_blank" rel="noopener">Taligent Inc</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Support &amp; Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact/">Contact Support</a></li>
+                        <li><a href="privacy/">Privacy Policy</a></li>
+                        <li><a href="terms/">Terms of Service</a></li>
+                        <li><a href="mailto:support@cuecentral.org">support@cuecentral.org</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="taligent-badge">
+                    <span>Taligent Inc</span> • Powering Modern Church Ministries
+                </div>
+                <div>
+                    &copy; 2026 Taligent Inc. All rights reserved. Cue Central is a trademark of Taligent Inc.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Master Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
