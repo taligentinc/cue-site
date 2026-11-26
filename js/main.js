@@ -31,72 +31,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. Interactive Cue Card & Setlist Preview
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    const stageSongTitle = document.querySelector('.stage-song-title');
-    const stageSongDetails = document.querySelector('.stage-song-details');
-    const stageTypeBadge = document.getElementById('stage-type-badge');
-    const prompterStanza = document.querySelector('.prompter-stanza');
-    const prompterCue = document.querySelector('.prompter-cue-line');
-    const stageNextItem = document.getElementById('stage-next-item');
+    // 3. Interactive Cue Card / Setlist Preview Tabs
+    const previewTabs = document.querySelectorAll('.preview-tab-btn');
+    const cuecardTab = document.getElementById('preview-tab-cuecard');
+    const setlistTab = document.getElementById('preview-tab-setlist');
 
-    const songData = {
-        'prelude': {
-            type: 'PRELUDE SET',
-            title: 'Prelude Set: Morning Meditation',
-            details: '<span>Assigned: Sarah Vance (Piano)</span> • <span>3 Hymns</span> • <span>Hymnal: Majesty</span>',
-            stanza: '1. #124 Come, Thou Fount of Every Blessing<br>2. #318 Blessed Assurance<br>3. #405 Be Thou My Vision',
-            cue: 'PDF Setlist Ready • 3 Hymnal Scans Linked',
-            next: 'Next: Welcome & Opening Prayer'
-        },
-        'hymn1': {
-            type: 'HYMN',
-            title: 'Crown Him with Many Crowns',
-            details: '<span>Congregational</span> • <span>Key of D</span> • <span>MAJ #242 • SSH #18</span>',
-            stanza: 'Verses to Sing: 1, 2, 4<br>OOS Format: Crown Him with Many Crowns - #242 - vv. 1, 2, 4',
-            cue: 'Last Sung: 14 weeks ago • Hymnal Scan PDF Attached',
-            next: 'Next: Choir Opener — Standing on the Promises'
-        },
-        'choir': {
-            type: 'CHOIR SPECIAL',
-            title: 'Worthy Is The Lamb',
-            details: '<span>Chancel Choir</span> • <span>Status: Active</span> • <span>Tag: Easter / Worship</span>',
-            stanza: 'Attached Assets in S3 Vault:<br>• Full Score (PDF) &nbsp;• Piano Accompaniment (PDF)<br>• Director Reference Recording (Audio)',
-            cue: 'Personal Setlist auto-selects your preferred voice/instrument PDF',
-            next: 'Next: Offertory — Instrumental Solo'
-        },
-        'special': {
-            type: 'SPECIAL MUSIC',
-            title: 'It Is Well With My Soul',
-            details: '<span>Vocal Trio</span> • <span>Confirmed via Request Link</span> • <span>Status: Active</span>',
-            stanza: 'Submitted by Performer via Automated 6-Day Request Email<br>Linked Choir Library Entry: It Is Well (Trio Arr.)',
-            cue: 'Schedule Flag: SPC • Conflict Check: All Members Available',
-            next: 'Next: Morning Message — Pastor'
-        },
-        'closing': {
-            type: 'HYMN',
-            title: 'Blessed Assurance',
-            details: '<span>Invitation / Closing</span> • <span>Key of D</span> • <span>MAJ #318</span>',
-            stanza: 'Verses to Sing: 1, 3<br>Logged automatically to Hymnody Usage History when marked sung.',
-            cue: '2-Up Printable Cue Card & QR Code Ready',
-            next: 'End of Service Order'
-        }
-    };
+    previewTabs.forEach(btn => {
+        btn.addEventListener('click', () => {
+            previewTabs.forEach(b => {
+                b.classList.remove('active');
+                b.style.background = 'transparent';
+                b.style.color = '#94a3b8';
+                b.style.borderColor = 'rgba(255, 255, 255, 0.12)';
+            });
+            btn.classList.add('active');
+            btn.style.background = 'rgba(99, 102, 241, 0.25)';
+            btn.style.color = '#ffffff';
+            btn.style.borderColor = 'rgba(99, 102, 241, 0.5)';
 
-    timelineItems.forEach(item => {
-        item.addEventListener('click', () => {
-            timelineItems.forEach(i => i.classList.remove('active'));
-            item.classList.add('active');
-
-            const id = item.getAttribute('data-song-id');
-            const data = songData[id];
-            if (data && stageSongTitle && prompterStanza) {
-                if (stageTypeBadge) stageTypeBadge.textContent = data.type;
-                stageSongTitle.textContent = data.title;
-                stageSongDetails.innerHTML = data.details;
-                prompterStanza.innerHTML = data.stanza;
-                if (prompterCue) prompterCue.textContent = data.cue;
-                if (stageNextItem) stageNextItem.textContent = data.next;
+            const target = btn.getAttribute('data-preview-tab');
+            if (cuecardTab && setlistTab) {
+                cuecardTab.style.display = target === 'cuecard' ? 'block' : 'none';
+                setlistTab.style.display = target === 'setlist' ? 'block' : 'none';
             }
         });
     });
